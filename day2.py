@@ -22,5 +22,5 @@ weight = input("enter your weight in kg: ")
 #Write your code below this line 👇
 height = float(height)
 weight = float(weight)
-bmi = int(weight / (height * height))
+bmi = round(weight / (height * height), 2)
 print(bmi)
