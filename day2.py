@@ -33,10 +33,10 @@ print(bmi)
 # 🚨 Don't change the code below 👇
 age = input("What is your current age?")
 # 🚨 Don't change the code above 👆
-
 #Write your code below this line 👇
 max_age = 90
-num_months = round((max_age - int(age)) * 12)
-num_weeks = round((max_age - int(age)) * 52)
-num_days = round((max_age - int(age)) * 365)
+age = int(age)
+num_months = round((max_age - age) * 12)
+num_weeks = round((max_age - age) * 52)
+num_days = round((max_age - age) * 365)
 print(f"You have {num_days} days, {num_weeks} weeks and {num_months} months left.")
