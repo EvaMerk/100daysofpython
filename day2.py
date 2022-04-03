@@ -36,7 +36,8 @@ age = input("What is your current age?")
 #Write your code below this line 👇
 max_age = 90
 age = int(age)
-num_months = round((max_age - age) * 12)
-num_weeks = round((max_age - age) * 52)
-num_days = round((max_age - age) * 365)
+years_remaining = max_age - age
+num_months = round(years_remaining * 12)
+num_weeks = round(years_remaining * 52)
+num_days = round(years_remaining * 365)
 print(f"You have {num_days} days, {num_weeks} weeks and {num_months} months left.")
