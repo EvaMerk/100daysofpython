@@ -62,6 +62,13 @@ else:
 #Pepperoni for Small Pizza: +$2
 #Pepperoni for Medium or Large Pizza: +$3
 #Extra cheese for any size pizza: + $1
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+#Write your code below this line 👇
 bill = 0
 
 if size == "S":
@@ -81,3 +88,40 @@ if extra_cheese == "Y":
     bill += 1
 
 print(f"Your final bill is: ${bill}")
+
+#Exercise 5 - Compatibility score
+#You are going to write a program that tests the compatibility between two people.
+#To work out the love score between two people:
+#Take both people's names and check for the number of times the letters in the word TRUE occurs. 
+#Then check for the number of times the letters in the word LOVE occurs. 
+#Then combine these numbers to make a 2 digit number.
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+#Write your code below this line 👇
+name_combined = name1 + " " + name2
+name_combined = name_combined.lower()
+
+t = name_combined.count("t")
+r = name_combined.count("r")
+u = name_combined.count("u")
+e = name_combined.count("e")
+name_true = t + r + u + e
+
+l = name_combined.count("l")
+o = name_combined.count("o")
+v = name_combined.count("v")
+e = name_combined.count("e")
+name_love = l + o + v + e
+
+score = str(name_true) + str(name_love)
+score = int(score)
+
+if score < 10 or score > 90:
+    print(f"Your score is {score}, you go together like coke and mentos.")
+elif score > 40 and score < 50:
+    print(f"Your score is {score}, you are alright together")
+else:
+    print(f"Your score is {score}")
