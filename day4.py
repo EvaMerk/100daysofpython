@@ -16,3 +16,22 @@ if random_side == 1:
     print("Heads")
 else:
     print("Tails")
+
+
+#Ex2: Who's paying the bill? Randomized name picker
+#You are going to write a program that will select a random name from a list of names. The person selected will have to pay for everybody's food bill.
+#Important: You are not allowed to use the choice() function.
+import random
+# 🚨 Don't change the code below 👇
+test_seed = int(input("Create a seed number: "))
+random.seed(test_seed)
+
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+paying_index = random.randint(0, len(names) - 1)
+paying_name = names[paying_index]
+print(f"{paying_name} is going to buy the meal today!")
