@@ -66,3 +66,75 @@ map[position_row - 1][position_column - 1] = "X"
 
 # 🚨 Don't change the code below 👇
 print(f"{row1}\n{row2}\n{row3}")
+
+#project: rock, paper, scissors
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+user_choice = input("What do you choose? Type 0 for Rock, 1 for Paper and 2 for Scissors.\n")
+computer_choice = str(random.randint(0, 2))
+print(computer_choice)
+
+if user_choice == "0":
+	print(rock)
+	if computer_choice == "0":
+		print(rock)
+		print("It's a draw.")
+	elif computer_choice == "1":
+		print(paper)
+		print("The computer chose Paper. You lost.")
+	elif computer_choice == "2":
+		print(scissors)
+		print("The computer chose Scissors. You won, congratulations!")
+else:
+	if user_choice == "1":
+		print(paper)
+		if computer_choice == "1":
+			print(paper)
+			print("It's a draw.")
+		elif computer_choice == "2":
+			print(scissors)
+			print("The computer chose Scissors. You lost.")
+		elif computer_choice == "0":
+			print(rock)
+			print("The computer chose Rock. You won, congratulations!")
+	else: 
+		if user_choice == "2":
+			print(scissors)
+			if computer_choice == "2":
+				print(scissors)
+				print("It's a draw.")
+			elif computer_choice == "1":
+				print(paper)
+				print("The computer chose Paper. You won, congratulations!")
+			elif computer_choice == "0":
+				print(rock)
+				print("The computer chose Rock. You lost, sorry.")
+				
+		
