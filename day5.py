@@ -47,3 +47,13 @@ for score in student_scores:
         highest_score= highest_score
         
 print(f"The highest score in the class is: {highest_score}")
+
+#ex 3 - calculate even numbers
+#You are going to write a program that calculates the sum of all the even numbers from 1 to 100. 
+#Thus, the first even number would be 2 and the last one is 100
+#Write your code below this row 👇
+total = 0
+for even_number in range(2, 101, 2):
+    total += even_number
+
+print(total)
