@@ -31,6 +31,47 @@ month = int(input("Enter a month: "))
 days = days_in_month(year, month)
 print(days)
 
+#Project: Calculator
+#Step 1
+#Calculator
+
+#Add
+def add(n1, n2):
+	return n1 + n2
+
+#Subtract
+def subtract(n1, n2):
+	return n1 - n2
+
+#Multiply
+def multiply(n1, n2):
+	return n1 * n2
+
+#Divide
+def divide(n1, n2):
+	return n1 / n2
+
+math_operation = {
+	"+": add,
+	"-": subtract,
+	"*": multiply,
+	"/": divide
+}
+
+num1 = int(input("What's the first number?:\n"))
+for symbol in math_operation:
+	print(symbol)
+operation = input("Which math operation do you want to perform? Pick a symbol from the lines above:\n")
+num2 = int(input("What's the second number?:\n"))
+
+for math_function in math_operation:
+	math_function = operation
+	function = math_operation[math_function]
+	answer = function(num1, num2)
+	
+print(f"{num1} {operation} {num2} = {answer}")
+
+
 
 
 
